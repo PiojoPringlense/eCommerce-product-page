@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+	--primary-500: 26, 100%, 55%;
+	--primary-300: 25, 100%, 94%;
+	--secondary-900: 220, 13%, 13%;
+	--secondary-600: 219, 9%, 45%;
+	--secondary-400: 220, 14%, 75%;
+	--secondary-200: 223, 64%, 98%;
+	--white: 0, 0%, 100%;
+	--black: 0, 0%, 0%;
+
+	font-family: "Kumbh Sans", sans-serif;
+	font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	margin: 0;
+	overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-container {
+	width: 80%;
+	max-width: 1440px;
+	margin-inline: auto;
+	position: relative;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 900px) {
+	.app-container {
+		width: 90%;
+	}
 }
