@@ -1,0 +1,134 @@
+.images-container img {
+	max-width: 100%;
+	display: block;
+}
+
+.images-container {
+	padding: 2rem;
+}
+
+.images-container.modal {
+	position: absolute;
+	inset: 0;
+	top: 6rem;
+	max-width: 50%;
+	margin: auto;
+}
+
+.images-container.modal .modal-background {
+	position: absolute;
+	inset: -100vmax;
+	background-color: hsla(var(--black), 0.75);
+}
+
+.images-container.modal .mobile-img-change {
+	display: grid;
+}
+
+.close-modal {
+	display: none;
+}
+
+.images-container.modal .close-modal {
+	cursor: pointer;
+	display: block;
+	background: none;
+	border: none;
+	outline: none;
+	position: absolute;
+	z-index: 2;
+	top: -1rem;
+	right: 2rem;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.close-modal > svg {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.image {
+	position: relative;
+	border-radius: 1.5rem;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.mobile-img-change {
+	display: none;
+	position: absolute;
+	background-color: white;
+	border: none;
+	outline: none;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	margin: 0;
+	place-items: center;
+	width: 3rem;
+	top: 50%;
+	cursor: pointer;
+}
+
+.mobile-img-change.prev {
+	left: 1rem;
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.mobile-img-change.next {
+	right: 1rem;
+	transform: translateY(-50%);
+}
+
+.thumbs-container {
+	display: flex;
+	margin-top: 2rem;
+	gap: 2rem;
+}
+
+.thumb-container {
+	position: relative;
+	border-radius: 1rem;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.thumb-container.active {
+	outline: 3px solid hsl(var(--primary-500));
+}
+
+.thumb-container.active::after,
+.thumb-container:hover::after,
+.thumb-container:focus::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: white;
+	opacity: 75%;
+}
+
+@media only screen and (max-width: 900px) {
+	.images-container {
+		padding: 0;
+	}
+
+	.images-container.modal {
+		display: none;
+	}
+
+	.image {
+		cursor: initial;
+		border-radius: 0;
+	}
+
+	.mobile-img-change {
+		display: grid;
+	}
+
+	.thumb-container {
+		display: none;
+	}
+}

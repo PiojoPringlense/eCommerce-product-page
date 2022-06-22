@@ -1,0 +1,14 @@
+.avatar {
+	height: 2.7rem;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	cursor: pointer;
+}
+
+.avatar > img {
+	max-width: 100%;
+	border-radius: 50%;
+}
+.avatar:hover > img {
+	outline: 2px solid hsl(var(--primary-500));
+}

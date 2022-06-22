@@ -1,0 +1,24 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+	position: relative;
+	padding-block: 2rem;
+	border-bottom: 1px solid hsla(var(--secondary-400), 0.5);
+}
+
+.menu-open,
+.menu-close {
+	border: none;
+	background: none;
+	display: none;
+	padding: 0;
+	text-align: left;
+}
+
+@media only screen and (max-width: 900px) {
+	.navbar.open .menu-open,
+	.navbar.close .menu-close {
+		display: block;
+	}
+}
